@@ -1,0 +1,33 @@
+name: Run Renovate
+on:
+  workflow_dispatch:
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - name: Retrieve keeper secrets
+        id: ksecrets
+        uses: Keeper-Security/ksm-action@master
+        with:
+          keeper-secret-config: ${{ secrets.KSM_CONFIG }}
+          secrets: |-
+            QODeOw-dwElfR5kzunCvwg/field/login > env:MS_USERNAME
+            QODeOw-dwElfR5kzunCvwg/field/password > env:MS_PASS
+            ct0MNUfbMRs3dXCDJpjJUA/custom_field/app_id > env:GH_APP_ID
+            ct0MNUfbMRs3dXCDJpjJUA/field/keyPair[0][privateKey] > env:GH_APP_PRIVATE_KEY
+      - name: Generate a github token
+        id: generate-gh-app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ env.GH_APP_ID }}
+          private-key: ${{ env.GH_APP_PRIVATE_KEY }}
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v43.0.19
+        with:
+          token: ${{ steps.generate-gh-app-token.outputs.token }}
+        env:
+          MS_USERNAME: ${{ env.MS_USERNAME }}
+          MS_PASS: ${{ env.MS_PASS }}
