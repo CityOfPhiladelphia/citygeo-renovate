@@ -34,4 +34,3 @@ jobs:
         env:
           RENOVATE_MULESOFT_USERNAME: ${{ env.MULESOFT_USERNAME }}
           RENOVATE_MULESOFT_PASS: ${{ env.MULESOFT_PASS }}
-          LOG_LEVEL: debug
