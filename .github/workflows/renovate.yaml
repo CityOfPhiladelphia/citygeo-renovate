@@ -14,8 +14,8 @@ jobs:
         with:
           keeper-secret-config: ${{ secrets.KSM_CONFIG }}
           secrets: |-
-            QODeOw-dwElfR5kzunCvwg/field/login > env:MS_USERNAME
-            QODeOw-dwElfR5kzunCvwg/field/password > env:MS_PASS
+            QODeOw-dwElfR5kzunCvwg/field/login > env:MULESOFT_USERNAME
+            QODeOw-dwElfR5kzunCvwg/field/password > env:MULESOFT_PASS
             ct0MNUfbMRs3dXCDJpjJUA/custom_field/app_id > env:GH_APP_ID
             ct0MNUfbMRs3dXCDJpjJUA/field/keyPair[0][privateKey] > env:GH_APP_PRIVATE_KEY
       - name: Generate a github token
@@ -29,6 +29,7 @@ jobs:
         with:
           token: ${{ steps.generate-gh-app-token.outputs.token }}
           configurationFile: config.js
+        # See https://github.com/renovatebot/github-action?tab=readme-ov-file#environment-variables
         env:
-          MS_USERNAME: ${{ env.MS_USERNAME }}
-          MS_PASS: ${{ env.MS_PASS }}
+          RENOVATE_MULESOFT_USERNAME: ${{ env.MULESOFT_USERNAME }}
+          RENOVATE_MULESOFT_PASS: ${{ env.MULESOFT_PASS }}

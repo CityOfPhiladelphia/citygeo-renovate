@@ -13,8 +13,8 @@ module.exports = {
     {
       matchHost: 'rtf-runtime-registry.kprod.msap.io',
       hostType: 'helm',
-      username: process.env.MS_USERNAME,
-      password: process.env.MS_PASS
+      username: process.env.RENOVATE_MULESOFT_USERNAME,
+      password: process.env.RENOVATE_MULESOFT_PASS
     }
   ],
   repositories: [
