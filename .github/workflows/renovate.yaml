@@ -28,6 +28,7 @@ jobs:
         uses: renovatebot/github-action@v43.0.19
         with:
           token: ${{ steps.generate-gh-app-token.outputs.token }}
+          configurationFile: config.js
         env:
           MS_USERNAME: ${{ env.MS_USERNAME }}
           MS_PASS: ${{ env.MS_PASS }}
