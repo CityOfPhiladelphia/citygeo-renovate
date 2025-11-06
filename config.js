@@ -18,7 +18,6 @@ module.exports = {
     }
   ],
   repositories: [
-    'CityOfPhiladelphia/mulesoft-rtf-gitops'//,
-    //'CityOfPhiladelphia/mulesoft-flex-gateway-iac'
+    'CityOfPhiladelphia/mulesoft-rtf-gitops'
   ]
 }
