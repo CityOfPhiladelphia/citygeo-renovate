@@ -24,6 +24,7 @@ jobs:
         with:
           app-id: ${{ env.GH_APP_ID }}
           private-key: ${{ env.GH_APP_PRIVATE_KEY }}
+          owner: CityOfPhiladelphia
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v43.0.19
         with:
@@ -33,5 +34,4 @@ jobs:
         env:
           RENOVATE_MULESOFT_USERNAME: ${{ env.MULESOFT_USERNAME }}
           RENOVATE_MULESOFT_PASS: ${{ env.MULESOFT_PASS }}
-          RENOVATE_PLATFORM: github
           LOG_LEVEL: debug
