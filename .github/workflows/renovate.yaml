@@ -34,3 +34,4 @@ jobs:
           RENOVATE_MULESOFT_USERNAME: ${{ env.MULESOFT_USERNAME }}
           RENOVATE_MULESOFT_PASS: ${{ env.MULESOFT_PASS }}
           RENOVATE_PLATFORM: github
+          LOG_LEVEL: debug
