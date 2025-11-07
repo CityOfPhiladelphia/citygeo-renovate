@@ -28,7 +28,7 @@ jobs:
           private-key: ${{ env.GH_APP_PRIVATE_KEY }}
           owner: CityOfPhiladelphia
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@v43.0.19
+        uses: renovatebot/github-action@4ebebabcd582dddea1692b05c3d5279f8e372b53 # v44.0.0
         with:
           token: ${{ steps.generate-gh-app-token.outputs.token }}
           configurationFile: config.js
