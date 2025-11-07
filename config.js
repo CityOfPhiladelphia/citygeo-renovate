@@ -20,6 +20,7 @@ module.exports = {
   repositories: [
     'CityOfPhiladelphia/mulesoft-rtf-gitops',
     'CityOfPhiladelphia/citygeo-shared-workflows',
-    'CityOfPhiladelphia/mulesoft-flex-gateway-iac'
+    'CityOfPhiladelphia/mulesoft-flex-gateway-iac',
+    'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
   ]
 }
