@@ -3,7 +3,7 @@ module.exports = {
   // Reduce this after done testing
   prHourlyLimit: 20,
   onboardingConfig: {
-    extends: ['config:recommended', ':dependencyDashboard'],
+    extends: ['config:bestPractices', ':dependencyDashboard'],
     ignorePresets: [':ignoreModulesAndTests']
   },
   flux: {
