@@ -9,6 +9,9 @@ module.exports = {
   flux: {
     "managerFilePatterns": ["/\\.yaml$/"]
   },
+  terraform: {
+    "pinDigests": true
+  },
   hostRules: [
     {
       matchHost: 'rtf-runtime-registry.kprod.msap.io',
