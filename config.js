@@ -3,8 +3,11 @@ module.exports = {
   // Reduce this after done testing
   prHourlyLimit: 20,
   onboardingConfig: {
-    extends: ['config:best-practices', ':dependencyDashboard'],
-    ignorePresets: [':ignoreModulesAndTests']
+    extends: ['config:best-practices'],
+    ignorePresets: [':ignoreModulesAndTests'],
+    terraform: {
+      "pinDigests": true
+    }
   },
   terraform: {
     "pinDigests": true
