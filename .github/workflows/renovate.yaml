@@ -36,6 +36,3 @@ jobs:
         env:
           RENOVATE_MULESOFT_USERNAME: ${{ env.MULESOFT_USERNAME }}
           RENOVATE_MULESOFT_PASS: ${{ env.MULESOFT_PASS }}
-          # This is not the token that renvoate uses to run, it's the token
-          # that renovate uses to read our private repos if there are github dependencies
-          RENOVATE_COP_GIT_TOKEN: ${{ steps.generate-gh-app-token.outputs.token }}
