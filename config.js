@@ -5,19 +5,6 @@ module.exports = {
   onboardingConfig: {
     extends: ['config:best-practices'],
     ignorePresets: [':ignoreModulesAndTests'],
-    terraform: {
-      "pinDigests": true
-    },
-    packageRules: [
-      {
-        matchManagers: ["terraform", "terraform-version"],
-        rangeStrategy: "pin",
-        pinDigests: true
-      }
-    ]
-  },
-  terraform: {
-    "pinDigests": true
   },
   hostRules: [
     {
