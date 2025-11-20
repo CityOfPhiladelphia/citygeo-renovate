@@ -7,7 +7,16 @@ module.exports = {
     ignorePresets: [':ignoreModulesAndTests'],
     terraform: {
       "pinDigests": true
-    }
+    },
+    packageRules: [
+      {
+        matchDatasources: [
+          "terraform-provider",
+          "terraform-module"
+        ],
+        pinDigests: true
+      }
+    ]
   },
   terraform: {
     "pinDigests": true
