@@ -15,6 +15,10 @@ module.exports = {
       hostType: 'helm',
       username: process.env.RENOVATE_MULESOFT_USERNAME,
       password: process.env.RENOVATE_MULESOFT_PASS
+    },
+    {
+      matchHost: 'https://github.com/CityOfPhiladelphia',
+      token: process.env.RENOVATE_COP_GIT_TOKEN
     }
   ],
   repositories: [

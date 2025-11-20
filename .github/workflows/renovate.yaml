@@ -25,7 +25,6 @@ jobs:
         uses: actions/create-github-app-token@67018539274d69449ef7c02e8e71183d1719ab42 # v2
         with:
           app-id: ${{ env.GH_APP_ID }}
-          private-key: ${{ env.GH_APP_PRIVATE_KEY }}
           owner: CityOfPhiladelphia
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@c91a61c730fa166439cd3e2c300c041590002b1d # v44.0.3
@@ -36,3 +35,6 @@ jobs:
         env:
           RENOVATE_MULESOFT_USERNAME: ${{ env.MULESOFT_USERNAME }}
           RENOVATE_MULESOFT_PASS: ${{ env.MULESOFT_PASS }}
+          # This is not the token that renvoate uses to run, it's the token
+          # that renovate uses to read our private repos if there are github dependencies
+          RENOVATE_COP_GIT_TOKEN: ${{ steps.generate-gh-app-token.outputs.token }}
