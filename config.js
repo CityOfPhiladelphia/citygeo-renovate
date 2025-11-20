@@ -6,9 +6,6 @@ module.exports = {
     extends: ['config:best-practices', ':dependencyDashboard'],
     ignorePresets: [':ignoreModulesAndTests']
   },
-  flux: {
-    "managerFilePatterns": ["/\\.yaml$/"]
-  },
   terraform: {
     "pinDigests": true
   },
@@ -22,6 +19,7 @@ module.exports = {
   ],
   repositories: [
     'CityOfPhiladelphia/mulesoft-rtf-gitops',
+    'CityOfPhiladelphia/mulesoft-rtf-iac',
     'CityOfPhiladelphia/citygeo-shared-workflows',
     'CityOfPhiladelphia/mulesoft-flex-gateway-iac',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
