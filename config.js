@@ -10,10 +10,8 @@ module.exports = {
     },
     packageRules: [
       {
-        matchDatasources: [
-          "terraform-provider",
-          "terraform-module"
-        ],
+        matchManagers: ["terraform", "terraform-version"],
+        rangeStrategy: "pin",
         pinDigests: true
       }
     ]
