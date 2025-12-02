@@ -19,6 +19,7 @@ module.exports = {
     'CityOfPhiladelphia/mulesoft-rtf-iac',
     'CityOfPhiladelphia/citygeo-shared-workflows',
     'CityOfPhiladelphia/mulesoft-flex-gateway-iac',
+    'CityOfPhiladelphia/grafana-iac',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
   ]
 }
