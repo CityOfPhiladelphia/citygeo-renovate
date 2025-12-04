@@ -34,6 +34,7 @@ jobs:
         with:
           token: ${{ steps.generate-gh-app-token.outputs.token }}
           configurationFile: config.js
+          env-regex: "^(?:RENOVATE_\\w+|LOG_LEVEL|AWS_REGION|AWS_ACCESS_KEY_ID|AWS_SECRET_ACCESS_KEY)$"
         # See https://github.com/renovatebot/github-action?tab=readme-ov-file#environment-variables
         env:
           RENOVATE_MULESOFT_USERNAME: ${{ env.MULESOFT_USERNAME }}
