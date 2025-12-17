@@ -21,6 +21,7 @@ module.exports = {
     'CityOfPhiladelphia/mulesoft-flex-gateway-iac',
     'CityOfPhiladelphia/openmetadata-gitops',
     'CityOfPhiladelphia/grafana-iac',
+    'CityOfPhiladelphia/mygeotab-api-adapter-iac',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
   ]
 }
