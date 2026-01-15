@@ -23,6 +23,7 @@ module.exports = {
     'CityOfPhiladelphia/grafana-iac',
     'CityOfPhiladelphia/grafana-gitops',
     'CityOfPhiladelphia/mygeotab-api-adapter-iac',
+    'CityOfPhiladelphia/citygeo-variety-cluster-gitops',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
   ]
 }
