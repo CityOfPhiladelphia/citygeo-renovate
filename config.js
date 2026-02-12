@@ -20,8 +20,6 @@ module.exports = {
     'CityOfPhiladelphia/citygeo-shared-workflows',
     'CityOfPhiladelphia/mulesoft-flex-gateway-iac',
     'CityOfPhiladelphia/openmetadata-gitops',
-    'CityOfPhiladelphia/grafana-iac',
-    'CityOfPhiladelphia/grafana-gitops',
     'CityOfPhiladelphia/mygeotab-api-adapter-iac',
     'CityOfPhiladelphia/citygeo-variety-cluster-gitops',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
