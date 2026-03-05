@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0/30 11-23 * * MON-FRI"
 
+# We only want one instance of Renovate running at a time
+concurrency:
+  group: renovate
+  cancel-in-progress: true
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
