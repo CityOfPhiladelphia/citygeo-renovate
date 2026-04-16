@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Retrieve keeper secrets
         id: ksecrets
-        uses: Keeper-Security/ksm-action@master
+        uses: Keeper-Security/ksm-action@37abbada28637b6478ba845e73d3f8b9676572fe # master
         with:
           keeper-secret-config: ${{ secrets.KSM_CONFIG }}
           secrets: |-
