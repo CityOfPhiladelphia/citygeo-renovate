@@ -28,7 +28,7 @@ module.exports = {
     'CityOfPhiladelphia/mygeotab-api-adapter-iac',
     'CityOfPhiladelphia/airflow-iac-dags',
     'CityOfPhiladelphia/citygeo-variety-cluster-gitops',
-    'CityOfPhiladelphia/citygeo-variety-cluster-iac',
+    'CityOfPhiladelphia/citygeo-variety-iac',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
   ]
 }
