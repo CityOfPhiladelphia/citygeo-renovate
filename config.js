@@ -29,6 +29,7 @@ module.exports = {
     'CityOfPhiladelphia/airflow-iac-dags',
     'CityOfPhiladelphia/citygeo-variety-cluster-gitops',
     'CityOfPhiladelphia/citygeo-variety-iac',
+    'CityOfPhiladelphia/mulesoft-weast-ci-cd-test',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
   ]
 }
