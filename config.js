@@ -1,7 +1,6 @@
 module.exports = {
   platform: 'github',
-  // Reduce this after done testing
-  prHourlyLimit: 20,
+  prHourlyLimit: 100,
   onboardingConfig: {
     extends: ['config:best-practices'],
     ignorePresets: [':ignoreModulesAndTests'],
