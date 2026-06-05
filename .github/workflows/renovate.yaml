@@ -15,14 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      - name: Retrieve keeper secrets
-        id: ksecrets
-        uses: Keeper-Security/ksm-action@master
-        with:
-          keeper-secret-config: ${{ secrets.KSM_CONFIG }}
-          secrets: |-
-            QODeOw-dwElfR5kzunCvwg/field/login > env:MULESOFT_USERNAME
-            QODeOw-dwElfR5kzunCvwg/field/password > env:MULESOFT_PASS
       - name: Generate a github token
         id: generate-gh-app-token
         uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
@@ -38,8 +30,8 @@ jobs:
           env-regex: "^(?:RENOVATE_\\w+|LOG_LEVEL|AWS_REGION|AWS_ACCESS_KEY_ID|AWS_SECRET_ACCESS_KEY)$"
         # See https://github.com/renovatebot/github-action?tab=readme-ov-file#environment-variables
         env:
-          RENOVATE_MULESOFT_USERNAME: ${{ env.MULESOFT_USERNAME }}
-          RENOVATE_MULESOFT_PASS: ${{ env.MULESOFT_PASS }}
+          RENOVATE_MULESOFT_USERNAME: ${{ secrets.RTF_PULL_USERNAME }}
+          RENOVATE_MULESOFT_PASS: ${{ secrets.RTF_PULL_PASSWORD }}
           # LOG_LEVEL: debug
           AWS_ACCESS_KEY_ID: ${{ secrets.CITYGEO_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CITYGEO_AWS_SECRET_ACCESS_KEY }}
