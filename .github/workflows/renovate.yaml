@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       target_repo:
-        description: "Repo to renovate. Leave blank to renovate all repositories"
+        description: "Repo to Renovate. Leave blank for all repositories"
         default: ""
         required: false
         type: string
@@ -14,7 +14,7 @@ on:
 # We only want one instance of Renovate running at a time
 concurrency:
   group: renovate
-  cancel-in-progress: true
+  queue: max
 
 jobs:
   renovate:
