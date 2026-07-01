@@ -1,6 +1,13 @@
 name: Run Renovate
 on:
   workflow_dispatch:
+    inputs:
+      target_repo:
+        description: "Repo to renovate. Leave blank to renovate all repositories"
+        default: ""
+        required: false
+        type: string
+  repository_dispatch:
   schedule:
     - cron: "0/30 11-23 * * MON-FRI"
 
@@ -36,3 +43,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.CITYGEO_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CITYGEO_AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: us-east-1
+          RENOVATE_TARGET_REPO: ${{ github.event.inputs.target_repo || github.event.client_payload.target_repo }}
