@@ -9,7 +9,7 @@ on:
         type: string
   repository_dispatch:
   schedule:
-    - cron: "0/30 11-23 * * MON-FRI"
+    - cron: "0 11-23 * * MON-FRI"
 
 # We only want one instance of Renovate running at a time
 concurrency:
