@@ -13,6 +13,7 @@ if (process.env.RENOVATE_TARGET_REPO && process.env.RENOVATE_TARGET_REPO.length 
     'CityOfPhiladelphia/mygeotab-api-adapter-iac',
     'CityOfPhiladelphia/airflow-iac-dags',
     'CityOfPhiladelphia/citygeo-variety-cluster-gitops',
+    'CityOfPhiladelphia/citygeo-variety-apps',
     'CityOfPhiladelphia/citygeo-variety-iac',
     'CityOfPhiladelphia/mulesoft-weast-ci-cd-test',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
