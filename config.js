@@ -15,6 +15,8 @@ if (process.env.RENOVATE_TARGET_REPO && process.env.RENOVATE_TARGET_REPO.length 
     'CityOfPhiladelphia/citygeo-variety-cluster-gitops',
     'CityOfPhiladelphia/citygeo-variety-apps',
     'CityOfPhiladelphia/citygeo-variety-iac',
+    'CityOfPhiladelphia/citygeo-secure-cluster-gitops',
+    'CityOfPhiladelphia/citygeo-secure-cluster-iac',
     'CityOfPhiladelphia/mulesoft-weast-ci-cd-test',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
   ]
