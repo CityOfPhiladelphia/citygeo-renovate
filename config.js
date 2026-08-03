@@ -18,6 +18,7 @@ if (process.env.RENOVATE_TARGET_REPO && process.env.RENOVATE_TARGET_REPO.length 
     'CityOfPhiladelphia/citygeo-secure-cluster-gitops',
     'CityOfPhiladelphia/citygeo-secure-iac',
     'CityOfPhiladelphia/mulesoft-weast-ci-cd-test',
+    'CityOfPhiladelphia/envoy-proxy-fips-build',
     'CityOfPhiladelphia/citygeo-renovate', // How funny, renovating itself!
   ]
 }
